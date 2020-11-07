@@ -1,0 +1,260 @@
+html {
+  font-size: 15px;
+  box-sizing: border-box;
+}
+.body {
+  font-family: "Spartan", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 150px;
+  /* box-shadow: 2rem 2rem 2rem rgba(42, 43, 43, 0.5); */
+  box-shadow: 2rem 2rem 2rem rgb(240, 250, 251);
+  background-image: linear-gradient(
+      to right,
+      rgba(21, 22, 22, 0.1),
+      rgba(21, 22, 22, 0.1)
+    ),
+    url("./images/bg-header-desktop.svg");
+  background-size: cover;
+  background-position: contain;
+  background-color: #56928f;
+}
+
+.main {
+  margin-top: 1rem;
+  background-color: rgb(240, 250, 251);
+}
+
+.main__container {
+  width: 85%;
+  margin: auto;
+  padding-bottom: 3rem;
+}
+
+.filter {
+  display: none;
+  /* opacity: 1;
+  height: 100%; */
+  position: relative;
+  top: -4rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 1px 5px 10px rgba(21, 22, 22, 0.1);
+}
+.active {
+  display: block;
+}
+.filter__container {
+  font-weight: 700;
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+.search__container {
+  color: #84bbba;
+  font-weight: 700;
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin-right: auto;
+}
+
+.clear{
+  color: #84bbba;
+  align-self: center;
+  border: none;
+  font-weight: 700;
+  background-color: transparent;
+  display: block;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.clear:focus{
+  outline: none;
+}
+.clear:hover{
+  border-bottom: 2px solid #84bbba;
+}
+
+.search {
+  margin-right: 15px;
+  display: flex;
+}
+.remove {
+  display: none;
+}
+
+.search__item {
+  background-color: #d8f0f3;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 7px;
+}
+
+.cancel {
+  background-color: #64babb;
+  padding: 10px 13px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  background-color: black;
+}
+
+.job__box {
+  margin-top: 5rem;
+}
+
+.job {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  /* box-shadow: 0 1px 10rem red; */
+  box-shadow: 1px 1px 20px rgba(21, 22, 22, 0.1);
+  border-radius: 5px;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.job:hover {
+  transform: scale(1.019) translateY(-5px);
+}
+
+.job__container {
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.job__img-box {
+  margin-right: 20px;
+}
+
+.job__img {
+}
+
+.job__content {
+  margin-right: auto;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.job__meta {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 13px;
+}
+.job__meta > p {
+  margin-right: 1rem;
+  /* text-align: center; */
+}
+
+.job__meta > p:first-child {
+  color: #84bbba;
+  /* font-weight: 700; */
+}
+
+.new {
+  background-color: #64babb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  font-weight: 700;
+  color: #ffffff;
+  height: 30px;
+  width: 70px;
+}
+
+.featured {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 100px;
+  color: #feffff;
+  font-weight: 700;
+  height: 30px;
+  width: 90px;
+  background-color: black;
+  text-align: center;
+}
+.job__title {
+  margin-bottom: 5px;
+}
+
+.job__date {
+  display: flex;
+}
+
+.job__date > p {
+  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  opacity: 20%;
+}
+
+.job__date > p:nth-child(2)::before,
+.job__date > p:nth-child(3)::before {
+  content: ".";
+  display: block;
+  margin-right: 0.7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.job__description {
+  display: flex;
+}
+
+.button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1rem;
+  background-color: #d8f0f3;
+  color: hsl(180, 29%, 50%);
+  text-align: center;
+  padding: 8px 12px;
+  font-weight: 700;
+  transition: all 0.2s;
+  box-shadow: 1px 1px 10px rgba(21, 22, 22, 0.1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  background-color: #56928f;
+  color: #ffffff;
+  transform: scale(1.2);
+}
